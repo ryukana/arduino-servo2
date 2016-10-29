@@ -54,15 +54,15 @@ void loop() {
   } else if (nowAction == 1) {
     servo2.write(0); // サーボ2の角度を0°に設定
   } else if (nowAction == 2) {
-    servo2.write(9); // サーボ2の角度を60°に設定
+    servo2.write(8);//9); // サーボ2の角度を60°に設定
   } else if (nowAction == 3) {
-    servo2.write(21); // サーボ2の角度を120°に設定
+    servo2.write(19);//21); // サーボ2の角度を120°に設定
   } else if (nowAction == 4) {
-    servo2.write(35); // サーボ2の角度を180°に設定
+    servo2.write(32);//35); // サーボ2の角度を180°に設定
   } else if (nowAction == 5) {
-    servo2.write(49); // サーボ2の角度を240°に設定
+    servo2.write(45);//49); // サーボ2の角度を240°に設定
   } else if (nowAction == 6) {
-    servo2.write(63); // サーボ2の角度を300°に設定
+    servo2.write(59);//); // サーボ2の角度を300°に設定
   } else if (nowAction == 9) {
     servo1.write(90); // サーボ1の角度を90°に設定
   } else {
