@@ -1,25 +1,16 @@
 #include <Servo.h>
 Servo servo1;        //Servo1オブジェクトを作成
 Servo servo2;        //Servo2オブジェクトを作成
-int BTReset = 3;
 
 char inByte = 0;
 int nowAction = 0;
 
-boolean isServoPosiInit = false;
 void setup() {
   servo1.attach(9);  //D9ピンをサーボ1の信号線として設定
   servo2.attach(8);  //D8ピンをサーボ2の信号線として設定
-  // make the Bluetooth Module reset:
-  digitalWrite(BTReset, LOW);
-  delay(100);
-  digitalWrite(BTReset, HIGH);
-  delay(500);
-
   // initialize serial communication at 115200 bits per second:
   Serial.begin(115200);
 }
-
 void loop() {
   // if we get a valid byte, read analog ins:
   if (Serial.available() > 0) {
@@ -44,7 +35,6 @@ void loop() {
     } else {
       nowAction - 1;
     }
-    Serial.println(inByte);
     delay(100);
   }
   delay(1);        // delay in between reads for stability
