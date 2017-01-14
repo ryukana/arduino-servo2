@@ -26,7 +26,7 @@ void loop() {
     // get incoming byte:
     inByte = Serial.read();
     if (inByte == '0') {
-      nowAction = 0;
+      nowAction = 9;
     } else if (inByte == '1') {
       nowAction = 1;
     } else if (inByte == '2') {
@@ -40,7 +40,7 @@ void loop() {
     } else if (inByte == '6') {
       nowAction = 6;
     } else if (inByte == '9') {
-      nowAction = 9;
+      nowAction = 0;
     } else {
       nowAction - 1;
     }
@@ -54,15 +54,15 @@ void loop() {
   } else if (nowAction == 1) {
     servo2.write(0); // サーボ2の角度を0°に設定
   } else if (nowAction == 2) {
-    servo2.write(8);//9); // サーボ2の角度を60°に設定
+    servo2.write(9);//7);//8); // サーボ2の角度を60°に設定
   } else if (nowAction == 3) {
-    servo2.write(19);//21); // サーボ2の角度を120°に設定
+    servo2.write(21);//20);//19); // サーボ2の角度を120°に設定
   } else if (nowAction == 4) {
-    servo2.write(32);//35); // サーボ2の角度を180°に設定
+    servo2.write(33);//32); // サーボ2の角度を180°に設定
   } else if (nowAction == 5) {
     servo2.write(45);//49); // サーボ2の角度を240°に設定
   } else if (nowAction == 6) {
-    servo2.write(59);//); // サーボ2の角度を300°に設定
+    servo2.write(58);//59); // サーボ2の角度を300°に設定
   } else if (nowAction == 9) {
     servo1.write(90); // サーボ1の角度を90°に設定
   } else {
