@@ -42,7 +42,7 @@ void loop() {
   if (nowAction == 0) {
     servo1.write(0); // サーボ1の角度を0°に設定
   } else if (nowAction == 1) {
-    servo2.write(0); // サーボ2の角度を0°に設定
+    servo2.write(73); // サーボ2の角度を0°に設定
   } else if (nowAction == 2) {
     servo2.write(9);//7);//8); // サーボ2の角度を60°に設定
   } else if (nowAction == 3) {
